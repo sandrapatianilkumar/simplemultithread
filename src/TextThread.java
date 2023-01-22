@@ -1,9 +1,5 @@
-public class TextThread extends Thread {
+public class TextThread implements  Runnable {
     private Integer number;
-
-    public TextThread(Integer number) {
-        this.number = number;
-    }
 
     @Override
     public void run() {
