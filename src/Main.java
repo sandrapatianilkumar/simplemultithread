@@ -12,7 +12,7 @@ public class Main {
 //        }
 //        IntStream.range(1,101).forEach(s->new TextThread(Integer.valueOf(s)).start());
 
-        ExecutorService executor = Executors.newFixedThreadPool(5);
+        ExecutorService executor = Executors.newCachedThreadPool();
         for (Integer i=1;i<=100;i++){
             TextThread textThread = new TextThread();
             executor.execute(textThread);
